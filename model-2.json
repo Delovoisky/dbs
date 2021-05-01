@@ -12,39 +12,39 @@
           "type": null
         },
         {
-          "name": "code_username",
+          "name": "coder_username",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "coder_email",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": null
+          "type": "varchar(30)"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         }
       ],
       "transform": {
         "x": 691.2222222222222,
         "y": 208.4982638888889,
-        "width": 142.2655029296875,
-        "height": 112
+        "width": 200.0166778564453,
+        "height": 168.20174831814222
       }
     },
     {
@@ -63,28 +63,28 @@
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": null
+          "type": "varchar(30)"
         },
         {
           "name": "cust_username",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         }
       ],
       "transform": {
@@ -110,14 +110,14 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "given_by",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "is_diploma",
@@ -128,8 +128,8 @@
         }
       ],
       "transform": {
-        "x": 682,
-        "y": 420.609375,
+        "x": 1227,
+        "y": 320.609375,
         "width": 161.90625,
         "height": 102
       }
@@ -150,21 +150,21 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "country",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(25)"
         },
         {
           "name": "timezone",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "time with time zone"
+          "type": "varchar"
         }
       ],
       "transform": {
@@ -172,46 +172,6 @@
         "y": 232.45000712076825,
         "width": 128,
         "height": 87.08331298828125
-      }
-    },
-    {
-      "name": "Order_profile",
-      "parent": null,
-      "attr": [
-        {
-          "name": "prof_id",
-          "primary": true,
-          "unique": false,
-          "nullable": false,
-          "type": null
-        },
-        {
-          "name": "package_size",
-          "primary": false,
-          "unique": true,
-          "nullable": false,
-          "type": null
-        },
-        {
-          "name": "revision_count",
-          "primary": false,
-          "unique": true,
-          "nullable": false,
-          "type": null
-        },
-        {
-          "name": "progl_id",
-          "primary": false,
-          "unique": false,
-          "nullable": false,
-          "type": null
-        }
-      ],
-      "transform": {
-        "x": 1223.8888888888887,
-        "y": 179.47500525580506,
-        "width": 195.65155029296875,
-        "height": 116.66666666666663
       }
     },
     {
@@ -233,16 +193,16 @@
           "type": "decimal(13,4)"
         },
         {
-          "name": "eta",
+          "name": "description",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(45)"
         }
       ],
       "transform": {
-        "x": 957,
-        "y": 20.100006103515625,
+        "x": 1153.6666666666665,
+        "y": 17.877783881293396,
         "width": 206,
         "height": 92.12152777777777
       }
@@ -252,32 +212,25 @@
       "parent": null,
       "attr": [
         {
-          "name": "progl_id",
+          "name": "plang_id",
           "primary": true,
           "unique": false,
           "nullable": false,
           "type": null
         },
         {
-          "name": "experience",
+          "name": "plang",
           "primary": false,
-          "unique": false,
-          "nullable": false,
-          "type": null
-        },
-        {
-          "name": "prog_language",
-          "primary": false,
-          "unique": false,
+          "unique": true,
           "nullable": false,
           "type": null
         }
       ],
       "transform": {
-        "x": 1220.1666666666665,
-        "y": 299.16493055555554,
-        "width": 209.0333251953125,
-        "height": 73.08331298828125
+        "x": 1190,
+        "y": 168.47778998480902,
+        "width": 189,
+        "height": 63
       }
     },
     {
@@ -296,25 +249,18 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
-        },
-        {
-          "name": "order_id",
-          "primary": false,
-          "unique": false,
-          "nullable": false,
-          "type": null
+          "type": "text"
         },
         {
           "name": "rate",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "text"
+          "type": "int(5)"
         }
       ],
       "transform": {
-        "x": 448.2222222222223,
+        "x": 449.2222222222223,
         "y": 105.25278303358277,
         "width": 154.2666473388672,
         "height": 88.7743064032662
@@ -336,12 +282,12 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": null
+          "type": "varchar(30)"
         }
       ],
       "transform": {
-        "x": 206.4444444444444,
-        "y": 379.5444505479601,
+        "x": 176.4444444444444,
+        "y": 343.5444505479601,
         "width": 175.25,
         "height": 56
       }
@@ -350,51 +296,27 @@
   "relations": [
     [
       {
-        "entity": "Document",
-        "identifying": true,
+        "entity": "Coder",
+        "identifying": false,
         "optional": false,
         "cardinality": 0,
         "xor": null,
         "name": null,
         "transform": {
           "anchor": {
-            "x": 762.953125,
-            "y": 420.609375,
-            "edge": 0
+            "x": 691.2222222222222,
+            "y": 275.5609350204468,
+            "edge": 3
           },
           "points": [
             {
-              "x": 762.654049343533,
-              "y": 370.55381944444446
+              "x": 504.6111111111111,
+              "y": 275.77629931767785
             }
           ],
           "manual": false
         }
       },
-      {
-        "entity": "Coder",
-        "identifying": false,
-        "optional": true,
-        "cardinality": 1,
-        "xor": null,
-        "name": null,
-        "transform": {
-          "anchor": {
-            "x": 762.3549736870659,
-            "y": 320.4982638888889,
-            "edge": 2
-          },
-          "points": [
-            {
-              "x": 762.654049343533,
-              "y": 370.55381944444446
-            }
-          ],
-          "manual": false
-        }
-      }
-    ],
-    [
       {
         "entity": "Location",
         "identifying": false,
@@ -416,24 +338,48 @@
           ],
           "manual": false
         }
-      },
+      }
+    ],
+    [
       {
         "entity": "Coder",
-        "identifying": true,
+        "identifying": false,
         "optional": false,
         "cardinality": 0,
         "xor": null,
         "name": null,
         "transform": {
           "anchor": {
-            "x": 691.2222222222222,
-            "y": 275.5609350204468,
+            "x": 891.2389000786675,
+            "y": 227.47778998480902,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 902.2389000786675,
+              "y": 193.47778998480902
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Prog_language",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1190,
+            "y": 193.47778998480902,
             "edge": 3
           },
           "points": [
             {
-              "x": 504.6111111111111,
-              "y": 275.77629931767785
+              "x": 902.2389000786675,
+              "y": 193.47778998480902
             }
           ],
           "manual": false
@@ -442,27 +388,51 @@
     ],
     [
       {
-        "entity": "Order_profile",
-        "identifying": true,
-        "optional": false,
+        "entity": "Coder",
+        "identifying": false,
+        "optional": true,
         "cardinality": 1,
         "xor": null,
         "name": "have",
         "transform": {
           "anchor": {
-            "x": 1223.8888888888887,
-            "y": 237.80833858913837,
+            "x": 691.2222222222222,
+            "y": 310.4982638888889,
             "edge": 3
           },
           "points": [
             {
-              "x": 1028.6883070203992,
-              "y": 238.03620319896265
+              "x": 680.2222222222222,
+              "y": 371.5444505479601
             }
           ],
           "manual": false
         }
       },
+      {
+        "entity": "Working",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 351.6944444444444,
+            "y": 371.5444505479601,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 680.2222222222222,
+              "y": 371.5444505479601
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
       {
         "entity": "Coder",
         "identifying": false,
@@ -472,89 +442,47 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 833.4877251519097,
-            "y": 238.26406780878693,
-            "edge": 1
-          },
-          "points": [
-            {
-              "x": 1028.6883070203992,
-              "y": 238.03620319896265
-            }
-          ],
-          "manual": false
-        }
-      }
-    ],
-    [
-      {
-        "entity": "Orders",
-        "identifying": false,
-        "optional": true,
-        "cardinality": 1,
-        "xor": null,
-        "name": null,
-        "transform": {
-          "anchor": {
-            "x": 1163,
-            "y": 102.2215338812934,
-            "edge": 1
-          },
-          "points": [
-            {
-              "x": 1174,
-              "y": 213.64167192247172
-            }
-          ],
-          "manual": false
-        }
-      },
-      {
-        "entity": "Order_profile",
-        "identifying": true,
-        "optional": false,
-        "cardinality": 1,
-        "xor": null,
-        "name": "takes from",
-        "transform": {
-          "anchor": {
-            "x": 1223.8888888888887,
-            "y": 213.64167192247172,
+            "x": 691.2222222222222,
+            "y": 242.10000610351562,
             "edge": 3
           },
           "points": [
             {
-              "x": 1174,
-              "y": 213.64167192247172
+              "x": 613.6062309741974,
+              "y": 242.10000610351562
+            },
+            {
+              "x": 614.0475502676434,
+              "y": 202.4263945685492
             }
           ],
-          "manual": false
+          "manual": true
         }
-      }
-    ],
-    [
+      },
       {
-        "entity": "Orders",
-        "identifying": true,
+        "entity": "Rating",
+        "identifying": false,
         "optional": false,
         "cardinality": 0,
         "xor": null,
-        "name": "do",
+        "name": "have",
         "transform": {
           "anchor": {
-            "x": 957,
-            "y": 102.2215338812934,
-            "edge": 3
+            "x": 603.4888695610895,
+            "y": 162.75278303358277,
+            "edge": 1
           },
           "points": [
             {
-              "x": 859.5,
-              "y": 102.22221204969617
+              "x": 614.0475502676434,
+              "y": 202.4263945685492
             }
           ],
           "manual": false
         }
-      },
+      }
+    ],
+    [
       {
         "entity": "Coder",
         "identifying": false,
@@ -574,41 +502,83 @@
               "y": 102.22289021809895
             },
             {
-              "x": 859.5,
-              "y": 102.22221204969617
-            }
-          ],
-          "manual": true
-        }
-      }
-    ],
-    [
-      {
-        "entity": "Orders",
-        "identifying": true,
-        "optional": false,
-        "cardinality": 0,
-        "xor": null,
-        "name": "place",
-        "transform": {
-          "anchor": {
-            "x": 957,
-            "y": 47.100006103515625,
-            "edge": 3
-          },
-          "points": [
-            {
-              "x": 749,
-              "y": 47.100006103515625
-            },
-            {
-              "x": 546.453125,
-              "y": 47.600006103515625
+              "x": 957.8333333333333,
+              "y": 101.11110093858505
             }
           ],
           "manual": true
         }
       },
+      {
+        "entity": "Orders",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "do",
+        "transform": {
+          "anchor": {
+            "x": 1153.6666666666665,
+            "y": 99.99931165907117,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 957.8333333333333,
+              "y": 101.11110093858505
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Coder",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 891.2389000786675,
+            "y": 304.70001220703125,
+            "edge": 1
+          },
+          "points": [
+            {
+              "x": 902.2389000786675,
+              "y": 371.609375
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Document",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 1227,
+            "y": 371.609375,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 902.2389000786675,
+              "y": 371.609375
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
       {
         "entity": "Customer",
         "identifying": false,
@@ -630,98 +600,32 @@
           ],
           "manual": false
         }
-      }
-    ],
-    [
+      },
       {
-        "entity": "Prog_language",
-        "identifying": true,
+        "entity": "Orders",
+        "identifying": false,
         "optional": false,
         "cardinality": 0,
         "xor": null,
-        "name": "have",
+        "name": "place",
         "transform": {
           "anchor": {
-            "x": 1220.1666666666665,
-            "y": 311.78298611111114,
+            "x": 1153.6666666666665,
+            "y": 44.8777838812934,
             "edge": 3
           },
           "points": [
             {
-              "x": 1026.827195909288,
-              "y": 311.140625
-            }
-          ],
-          "manual": false
-        }
-      },
-      {
-        "entity": "Coder",
-        "identifying": false,
-        "optional": true,
-        "cardinality": 1,
-        "xor": null,
-        "name": null,
-        "transform": {
-          "anchor": {
-            "x": 833.4877251519097,
-            "y": 310.4982638888889,
-            "edge": 1
-          },
-          "points": [
-            {
-              "x": 1026.827195909288,
-              "y": 311.140625
-            }
-          ],
-          "manual": false
-        }
-      }
-    ],
-    [
-      {
-        "entity": "Rating",
-        "identifying": true,
-        "optional": false,
-        "cardinality": 0,
-        "xor": null,
-        "name": "have",
-        "transform": {
-          "anchor": {
-            "x": 602.4888695610895,
-            "y": 162.75278303358277,
-            "edge": 1
-          },
-          "points": [
-            {
-              "x": 613.5475502676434,
-              "y": 202.4263945685492
-            }
-          ],
-          "manual": false
-        }
-      },
-      {
-        "entity": "Coder",
-        "identifying": false,
-        "optional": true,
-        "cardinality": 1,
-        "xor": null,
-        "name": null,
-        "transform": {
-          "anchor": {
-            "x": 691.2222222222222,
-            "y": 242.10000610351562,
-            "edge": 3
-          },
-          "points": [
-            {
-              "x": 613.6062309741974,
-              "y": 242.10000610351562
+              "x": 749,
+              "y": 47.100006103515625
             },
             {
-              "x": 613.5475502676434,
-              "y": 202.4263945685492
+              "x": 666.1111111111111,
+              "y": 48.92223442925325
+            },
+            {
+              "x": 546.453125,
+              "y": 47.600006103515625
             }
           ],
           "manual": true
@@ -729,28 +633,6 @@
       }
     ],
     [
-      {
-        "entity": "Rating",
-        "identifying": true,
-        "optional": false,
-        "cardinality": 0,
-        "xor": null,
-        "name": "write",
-        "transform": {
-          "anchor": {
-            "x": 448.2222222222223,
-            "y": 162.75278303358277,
-            "edge": 3
-          },
-          "points": [
-            {
-              "x": 390.56423611111114,
-              "y": 162.75278307101678
-            }
-          ],
-          "manual": false
-        }
-      },
       {
         "entity": "Customer",
         "identifying": false,
@@ -770,54 +652,76 @@
               "y": 162.75278310845079
             },
             {
-              "x": 390.56423611111114,
+              "x": 391.06423611111114,
               "y": 162.75278307101678
             }
           ],
           "manual": true
         }
+      },
+      {
+        "entity": "Rating",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": "write",
+        "transform": {
+          "anchor": {
+            "x": 449.2222222222223,
+            "y": 162.75278303358277,
+            "edge": 3
+          },
+          "points": [
+            {
+              "x": 391.06423611111114,
+              "y": 162.75278307101678
+            }
+          ],
+          "manual": false
+        }
       }
     ],
     [
       {
-        "entity": "Working",
-        "identifying": true,
-        "optional": false,
-        "cardinality": 0,
+        "entity": "Orders",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
         "xor": null,
         "name": null,
         "transform": {
           "anchor": {
-            "x": 381.6944444444444,
-            "y": 407.5444505479601,
-            "edge": 1
+            "x": 1153.6666666666665,
+            "y": 64.47778998480902,
+            "edge": 3
           },
           "points": [
             {
-              "x": 392.6944444444444,
-              "y": 310.4982638888889
+              "x": 507,
+              "y": 64.47778998480902
             }
           ],
           "manual": false
         }
       },
       {
-        "entity": "Coder",
+        "entity": "Rating",
         "identifying": false,
-        "optional": true,
-        "cardinality": 1,
+        "optional": false,
+        "cardinality": 0,
         "xor": null,
-        "name": "have",
+        "name": null,
         "transform": {
           "anchor": {
-            "x": 691.2222222222222,
-            "y": 310.4982638888889,
-            "edge": 3
+            "x": 507,
+            "y": 105.25278303358277,
+            "edge": 0
           },
           "points": [
             {
-              "x": 392.6944444444444,
-              "y": 310.4982638888889
+              "x": 507,
+              "y": 64.47778998480902
             }
           ],
           "manual": false

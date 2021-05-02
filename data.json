@@ -16,28 +16,35 @@
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(30)"
+          "type": "varchar(50)"
         },
         {
           "name": "coder_username",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
+        },
+        {
+          "name": "credit_card",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "bigint"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         }
       ]
     },
@@ -57,28 +64,35 @@
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(30)"
+          "type": "varchar(50)"
         },
         {
           "name": "cust_username",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
+        },
+        {
+          "name": "credit_card",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "bigint"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         }
       ]
     },
@@ -132,14 +146,14 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "country",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "timezone",
@@ -339,6 +353,22 @@
         "identifying": false,
         "optional": false,
         "cardinality": 0,
+        "xor": null
+      }
+    ],
+    [
+      {
+        "entity": "Customer",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null
+      },
+      {
+        "entity": "Location",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
         "xor": null
       }
     ],

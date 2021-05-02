@@ -13,11 +13,11 @@ CREATE TABLE coder (
     coder_id SERIAL NOT NULL,
     loc_id INTEGER NOT NULL,
     plang_id INTEGER NOT NULL,
-    coder_username VARCHAR(25) NOT NULL,
-    coder_email VARCHAR(30) NOT NULL,
+    coder_username VARCHAR(50) NOT NULL,
+    coder_email VARCHAR(50) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    credit_card INTEGER NOT NULL
+    credit_card BIGINT NOT NULL
 );
 ALTER TABLE coder ADD CONSTRAINT pk_coder PRIMARY KEY (coder_id);
 ALTER TABLE coder ADD CONSTRAINT uc_coder_coder_username UNIQUE (coder_username);
@@ -25,11 +25,12 @@ ALTER TABLE coder ADD CONSTRAINT uc_coder_coder_email UNIQUE (coder_email);
 
 CREATE TABLE customer (
     cust_id SERIAL NOT NULL,
-    cust_email VARCHAR(30) NOT NULL,
-    cust_username VARCHAR(25) NOT NULL,
+    loc_id INTEGER NOT NULL,
+    cust_email VARCHAR(50) NOT NULL,
+    cust_username VARCHAR(50) NOT NULL,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    credit_card INTEGER NOT NULL
+    credit_card BIGINT NOT NULL
 );
 ALTER TABLE customer ADD CONSTRAINT pk_customer PRIMARY KEY (cust_id);
 ALTER TABLE customer ADD CONSTRAINT uc_customer_cust_email UNIQUE (cust_email);
@@ -88,6 +89,8 @@ ALTER TABLE working ADD CONSTRAINT pk_working PRIMARY KEY (work_id);
 ALTER TABLE coder ADD CONSTRAINT fk_coder_location FOREIGN KEY (loc_id) REFERENCES location (loc_id) ON DELETE CASCADE;
 ALTER TABLE coder ADD CONSTRAINT fk_coder_prog_language FOREIGN KEY (plang_id) REFERENCES prog_language (plang_id) ON DELETE CASCADE;
 
+ALTER TABLE customer ADD CONSTRAINT fk_customer_location FOREIGN KEY (loc_id) REFERENCES location (loc_id) ON DELETE CASCADE;
+
 ALTER TABLE document ADD CONSTRAINT fk_document_coder FOREIGN KEY (coder_id) REFERENCES coder (coder_id) ON DELETE CASCADE;
 
 ALTER TABLE orders ADD CONSTRAINT fk_orders_coder FOREIGN KEY (coder_id) REFERENCES coder (coder_id) ON DELETE CASCADE;
@@ -98,3 +101,4 @@ ALTER TABLE rating ADD CONSTRAINT fk_rating_customer FOREIGN KEY (cust_id) REFER
 ALTER TABLE rating ADD CONSTRAINT fk_rating_orders FOREIGN KEY (order_id) REFERENCES orders (order_id) ON DELETE CASCADE;
 
 ALTER TABLE working ADD CONSTRAINT fk_working_coder FOREIGN KEY (coder_id) REFERENCES coder (coder_id) ON DELETE CASCADE;
+

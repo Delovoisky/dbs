@@ -13,11 +13,11 @@ CREATE TABLE coder (
     coder_id SERIAL NOT NULL,
     loc_id INTEGER NOT NULL,
     plang_id INTEGER NOT NULL,
-    coder_username VARCHAR(256) NOT NULL,
-    coder_email VARCHAR(256) NOT NULL,
-    first_name VARCHAR(256) NOT NULL,
-    last_name VARCHAR(256) NOT NULL,
-    credit_card VARCHAR(256) NOT NULL
+    coder_username VARCHAR(25) NOT NULL,
+    coder_email VARCHAR(30) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    credit_card INTEGER NOT NULL
 );
 ALTER TABLE coder ADD CONSTRAINT pk_coder PRIMARY KEY (coder_id);
 ALTER TABLE coder ADD CONSTRAINT uc_coder_coder_username UNIQUE (coder_username);
@@ -25,11 +25,11 @@ ALTER TABLE coder ADD CONSTRAINT uc_coder_coder_email UNIQUE (coder_email);
 
 CREATE TABLE customer (
     cust_id SERIAL NOT NULL,
-    cust_email VARCHAR(256) NOT NULL,
-    cust_username VARCHAR(256) NOT NULL,
-    first_name VARCHAR(256) NOT NULL,
-    last_name VARCHAR(256) NOT NULL,
-    credit_card VARCHAR(256) NOT NULL
+    cust_email VARCHAR(30) NOT NULL,
+    cust_username VARCHAR(25) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    credit_card INTEGER NOT NULL
 );
 ALTER TABLE customer ADD CONSTRAINT pk_customer PRIMARY KEY (cust_id);
 ALTER TABLE customer ADD CONSTRAINT uc_customer_cust_email UNIQUE (cust_email);
@@ -38,16 +38,16 @@ ALTER TABLE customer ADD CONSTRAINT uc_customer_cust_username UNIQUE (cust_usern
 CREATE TABLE document (
     doc_id SERIAL NOT NULL,
     coder_id INTEGER NOT NULL,
-    document_type VARCHAR(256) NOT NULL,
-    given_by VARCHAR(256) NOT NULL,
-    is_diploma VARCHAR(256)
+    document_type VARCHAR(25) NOT NULL,
+    given_by VARCHAR(25) NOT NULL,
+    is_diploma BOOLEAN
 );
 ALTER TABLE document ADD CONSTRAINT pk_document PRIMARY KEY (doc_id);
 
 CREATE TABLE location (
     loc_id SERIAL NOT NULL,
-    city VARCHAR(256) NOT NULL,
-    country VARCHAR(256) NOT NULL,
+    city VARCHAR(50) NOT NULL,
+    country VARCHAR(50) NOT NULL,
     timezone VARCHAR(256) NOT NULL
 );
 ALTER TABLE location ADD CONSTRAINT pk_location PRIMARY KEY (loc_id);
@@ -56,8 +56,8 @@ CREATE TABLE orders (
     order_id SERIAL NOT NULL,
     coder_id INTEGER NOT NULL,
     cust_id INTEGER NOT NULL,
-    cost VARCHAR(256) NOT NULL,
-    description VARCHAR(256) NOT NULL
+    cost DECIMAL(13, 4) NOT NULL,
+    description VARCHAR(45) NOT NULL
 );
 ALTER TABLE orders ADD CONSTRAINT pk_orders PRIMARY KEY (order_id);
 
@@ -73,15 +73,15 @@ CREATE TABLE rating (
     coder_id INTEGER NOT NULL,
     cust_id INTEGER NOT NULL,
     order_id INTEGER NOT NULL,
-    comment VARCHAR(256) NOT NULL,
-    rate VARCHAR(256) NOT NULL
+    comment TEXT NOT NULL,
+    rate INTEGER NOT NULL
 );
 ALTER TABLE rating ADD CONSTRAINT pk_rating PRIMARY KEY (rate_id);
 
 CREATE TABLE working (
     work_id SERIAL NOT NULL,
     coder_id INTEGER NOT NULL,
-    work_place VARCHAR(256) NOT NULL
+    work_place VARCHAR(30) NOT NULL
 );
 ALTER TABLE working ADD CONSTRAINT pk_working PRIMARY KEY (work_id);
 

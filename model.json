@@ -16,33 +16,40 @@
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "coder_email",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(30)"
+          "type": "varchar(50)"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
+        },
+        {
+          "name": "credit_card",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "bigint"
         }
       ],
       "transform": {
-        "x": 691.2222222222222,
-        "y": 208.4982638888889,
+        "x": 676.2222222222222,
+        "y": 207.4982638888889,
         "width": 200.0166778564453,
         "height": 168.20174831814222
       }
@@ -63,35 +70,42 @@
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(30)"
+          "type": "varchar(50)"
         },
         {
           "name": "cust_username",
           "primary": false,
           "unique": true,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "first_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "last_name",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
+        },
+        {
+          "name": "credit_card",
+          "primary": false,
+          "unique": false,
+          "nullable": false,
+          "type": "bigint"
         }
       ],
       "transform": {
         "x": 172,
         "y": 37.609375,
-        "width": 160.90625,
-        "height": 98
+        "width": 189,
+        "height": 129.13330078125
       }
     },
     {
@@ -150,14 +164,14 @@
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "country",
           "primary": false,
           "unique": false,
           "nullable": false,
-          "type": "varchar(25)"
+          "type": "varchar(50)"
         },
         {
           "name": "timezone",
@@ -168,9 +182,9 @@
         }
       ],
       "transform": {
-        "x": 190,
+        "x": 191,
         "y": 232.45000712076825,
-        "width": 128,
+        "width": 189,
         "height": 87.08331298828125
       }
     },
@@ -262,7 +276,7 @@
       "transform": {
         "x": 449.2222222222223,
         "y": 105.25278303358277,
-        "width": 154.2666473388672,
+        "width": 158.0166778564453,
         "height": 88.7743064032662
       }
     },
@@ -304,14 +318,14 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 691.2222222222222,
-            "y": 275.5609350204468,
+            "x": 676.2222222222222,
+            "y": 274.5609350204468,
             "edge": 3
           },
           "points": [
             {
-              "x": 504.6111111111111,
-              "y": 275.77629931767785
+              "x": 528.1111111111111,
+              "y": 275.27629931767785
             }
           ],
           "manual": false
@@ -326,14 +340,14 @@
         "name": "located",
         "transform": {
           "anchor": {
-            "x": 318,
+            "x": 380,
             "y": 275.9916636149089,
             "edge": 1
           },
           "points": [
             {
-              "x": 504.6111111111111,
-              "y": 275.77629931767785
+              "x": 528.1111111111111,
+              "y": 275.27629931767785
             }
           ],
           "manual": false
@@ -350,14 +364,14 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 891.2389000786675,
-            "y": 227.47778998480902,
+            "x": 876.2389000786675,
+            "y": 226.47778998480902,
             "edge": 1
           },
           "points": [
             {
-              "x": 902.2389000786675,
-              "y": 193.47778998480902
+              "x": 1033.1194500393337,
+              "y": 209.97778998480902
             }
           ],
           "manual": false
@@ -378,8 +392,8 @@
           },
           "points": [
             {
-              "x": 902.2389000786675,
-              "y": 193.47778998480902
+              "x": 1033.1194500393337,
+              "y": 209.97778998480902
             }
           ],
           "manual": false
@@ -396,14 +410,14 @@
         "name": "have",
         "transform": {
           "anchor": {
-            "x": 691.2222222222222,
-            "y": 310.4982638888889,
+            "x": 676.2222222222222,
+            "y": 309.4982638888889,
             "edge": 3
           },
           "points": [
             {
-              "x": 680.2222222222222,
-              "y": 371.5444505479601
+              "x": 665.2222222222222,
+              "y": 379.477789984809
             }
           ],
           "manual": false
@@ -424,8 +438,8 @@
           },
           "points": [
             {
-              "x": 680.2222222222222,
-              "y": 371.5444505479601
+              "x": 665.2222222222222,
+              "y": 379.477789984809
             }
           ],
           "manual": false
@@ -442,8 +456,8 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 691.2222222222222,
-            "y": 242.10000610351562,
+            "x": 676.2222222222222,
+            "y": 241.10000610351562,
             "edge": 3
           },
           "points": [
@@ -452,7 +466,7 @@
               "y": 242.10000610351562
             },
             {
-              "x": 614.0475502676434,
+              "x": 615.9225655264324,
               "y": 202.4263945685492
             }
           ],
@@ -468,13 +482,13 @@
         "name": "have",
         "transform": {
           "anchor": {
-            "x": 603.4888695610895,
+            "x": 607.2389000786676,
             "y": 162.75278303358277,
             "edge": 1
           },
           "points": [
             {
-              "x": 614.0475502676434,
+              "x": 615.9225655264324,
               "y": 202.4263945685492
             }
           ],
@@ -492,8 +506,8 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 773,
-            "y": 208.4982638888889,
+            "x": 758,
+            "y": 207.4982638888889,
             "edge": 0
           },
           "points": [
@@ -542,14 +556,14 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 891.2389000786675,
-            "y": 304.70001220703125,
+            "x": 876.2389000786675,
+            "y": 303.70001220703125,
             "edge": 1
           },
           "points": [
             {
-              "x": 902.2389000786675,
-              "y": 371.609375
+              "x": 1051.6194500393337,
+              "y": 337.6546936035156
             }
           ],
           "manual": false
@@ -570,8 +584,54 @@
           },
           "points": [
             {
-              "x": 902.2389000786675,
-              "y": 371.609375
+              "x": 1051.6194500393337,
+              "y": 337.6546936035156
+            }
+          ],
+          "manual": false
+        }
+      }
+    ],
+    [
+      {
+        "entity": "Customer",
+        "identifying": false,
+        "optional": false,
+        "cardinality": 0,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 266.5,
+            "y": 166.74267578125,
+            "edge": 2
+          },
+          "points": [
+            {
+              "x": 276,
+              "y": 199.59634145100912
+            }
+          ],
+          "manual": false
+        }
+      },
+      {
+        "entity": "Location",
+        "identifying": false,
+        "optional": true,
+        "cardinality": 1,
+        "xor": null,
+        "name": null,
+        "transform": {
+          "anchor": {
+            "x": 285.5,
+            "y": 232.45000712076825,
+            "edge": 0
+          },
+          "points": [
+            {
+              "x": 276,
+              "y": 199.59634145100912
             }
           ],
           "manual": false
@@ -588,14 +648,14 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 332.90625,
+            "x": 361,
             "y": 48.100006103515625,
             "edge": 1
           },
           "points": [
             {
-              "x": 546.453125,
-              "y": 47.600006103515625
+              "x": 519.0555555555555,
+              "y": 48.51112026638444
             }
           ],
           "manual": false
@@ -624,8 +684,8 @@
               "y": 48.92223442925325
             },
             {
-              "x": 546.453125,
-              "y": 47.600006103515625
+              "x": 519.0555555555555,
+              "y": 48.51112026638444
             }
           ],
           "manual": true
@@ -642,7 +702,7 @@
         "name": null,
         "transform": {
           "anchor": {
-            "x": 332.90625,
+            "x": 361,
             "y": 95.36302947998047,
             "edge": 1
           },
@@ -698,8 +758,8 @@
           },
           "points": [
             {
-              "x": 507,
-              "y": 64.47778998480902
+              "x": 824.8333333333333,
+              "y": 79.3652865091959
             }
           ],
           "manual": false
@@ -720,8 +780,8 @@
           },
           "points": [
             {
-              "x": 507,
-              "y": 64.47778998480902
+              "x": 824.8333333333333,
+              "y": 79.3652865091959
             }
           ],
           "manual": false
